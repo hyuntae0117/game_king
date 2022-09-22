@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_king/player_set_up_page.dart';
+import 'package:game_king/util/game_scroll_behavior.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: GameScrollBehavior(),
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.

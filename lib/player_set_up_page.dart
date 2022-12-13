@@ -16,6 +16,8 @@ class _PlayerSetUpPageState extends State<PlayerSetUpPage> {
   final nameController = TextEditingController();
   List<Player> players = [];
 
+  GameScore gameScore = GameScore([]);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,14 +39,10 @@ class _PlayerSetUpPageState extends State<PlayerSetUpPage> {
               decoration: const BoxDecoration(
                   color: Colors.black12,
                   borderRadius: BorderRadius.all(Radius.circular(20))),
-              child: Expanded(
-                  child: GamePlayersView(
+              child: GamePlayersView(
                 players: players,
-              ))),
-          TextButton(onPressed: _addButtonPressed, child: const Text("게임 시작!")),
-          RoundTableView(
-            gameScores: GameScore(),
-          ),
+              )),
+          RoundTableView(gameScores: GameScore(players)),
         ],
       ),
     );

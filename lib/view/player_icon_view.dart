@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../model/player.dart';
 
 class PlayerIconView extends StatelessWidget {
-  PlayerIconView({super.key, required this.player});
-  Player player;
+  const PlayerIconView({super.key, required this.player});
+  final Player player;
 
   @override
   Widget build(BuildContext context) {

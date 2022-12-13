@@ -21,6 +21,7 @@ class _PlayerSetUpPageState extends State<PlayerSetUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           const Text("Player를 추가해주세요"),
